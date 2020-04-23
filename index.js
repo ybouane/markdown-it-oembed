@@ -33,7 +33,7 @@ const setup = function (md, options) {
 		}
 		return '<a href="'+H.escape(url)+'">'+H.escape(url)+'</a>';
 	};
-	MarkdownIt.prototype.renderAsync = async function (src, env) {
+	md.renderAsync = async function (src, env) {
 		env = env || {};
 		env.oEmbed = true;
 		env.toReplace = {};
@@ -47,7 +47,7 @@ const setup = function (md, options) {
 		}
 		return out;
 	};
-	MarkdownIt.prototype.renderInlineAsync = async function (src, env) {
+	md.renderInlineAsync = async function (src, env) {
 		env = env || {};
 		env.oEmbed = true;
 		env.toReplace = {};
