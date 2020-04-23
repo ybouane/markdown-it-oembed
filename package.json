@@ -1,0 +1,23 @@
+{
+  "name": "markdown-it-oembed",
+  "version": "1.0.0",
+  "description": "Oembed implementation for markdownit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown-it",
+    "markdown-it-plugin",
+    "oembed",
+    "embed",
+    "youtube",
+    "video",
+    "instagram"
+  ],
+  "author": "ybouane",
+  "license": "MIT",
+  "dependencies": {
+    "upperh": "^1.2.4"
+  }
+}
