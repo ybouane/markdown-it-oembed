@@ -7,10 +7,12 @@ Since the oEmbed process requires making an HTTP request, it must be done asynch
 `MarkdownIt.renderInlineAsync`)
 
 In the markdown code, you need to put the embed URL in the image tag as follows:
+
 `!(Palm trees)[https://www.instagram.com/p/B_Iu6rqA_gY/]`
 
 # Example usage
-```const md = require('markdown-it');
+```
+const md = require('markdown-it');
 const MarkdownItOEmbed = require('markdown-it-oembed');
 
 md.use(MarkdownItOEmbed);
