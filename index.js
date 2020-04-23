@@ -8,11 +8,13 @@ const setup = function (md, options) {
 	var providersRegexp = [];
 	for(let provider of providers) {
 		for(let endpoint of provider.endpoints) {
-			for(let scheme of endpoint.schemes) {
-				providersRegexp.push([
-					new RegExp('^'+H.regexpEscape(scheme).replace(/\\\*/g, '.+')),
-					endpoint.url.replace(/\{format\}/, 'json'),
-				]);
+			if(endpoint.schemes) {
+				for(let scheme of endpoint.schemes) {
+					providersRegexp.push([
+						new RegExp('^'+H.regexpEscape(scheme).replace(/\\\*/g, '.+')),
+						endpoint.url.replace(/\{format\}/, 'json'),
+					]);
+				}
 			}
 		}
 	}
