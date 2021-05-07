@@ -1,11 +1,16 @@
 {
   "name": "markdown-it-oembed",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Oembed implementation for markdownit",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ybouane/markdown-it-oembed.git"
+  },
+
   "keywords": [
     "markdown-it",
     "markdown-it-plugin",
@@ -15,6 +20,7 @@
     "video",
     "instagram"
   ],
+  "homepage": "https://github.com/ybouane/markdown-it-oembed#readme",
   "author": "ybouane",
   "license": "MIT",
   "dependencies": {
