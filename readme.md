@@ -8,7 +8,7 @@ Since the oEmbed process requires making an HTTP request, it must be done asynch
 
 In the markdown code, you need to put the embed URL in the image tag as follows:
 
-`![Palm trees](https://www.instagram.com/p/B_Iu6rqA_gY/)`
+`![Getting Started: Sktch.io](https://www.youtube.com/watch?v=CMfBj0U221k)`
 
 # Example usage
 ```
@@ -21,6 +21,6 @@ var md = new MarkdownIt({
 });
 md.use(MarkdownItOEmbed);
 (async () => {
-	console.log(await md.renderAsync('![Palm trees](https://www.instagram.com/p/B_Iu6rqA_gY/)'));
+	console.log(await md.renderAsync('![Getting Started: Sktch.io](https://www.youtube.com/watch?v=CMfBj0U221k)'));
 })();
 ```

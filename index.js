@@ -19,8 +19,10 @@ const setup = function (md, options) {
 		}
 	}
 	const parseOEmbed = async ([url, data]) => {
-		data = await data;
-		if(Object(data)===data && !Array.isArray(data)) {
+		try {
+			data = await data;
+		} catch(e) {data = undefined;}
+		if(H.isObject(data)) {
 			switch(data.type) {
 				case 'rich':
 				case 'video':
@@ -71,7 +73,7 @@ const setup = function (md, options) {
 					var id = H.uniqueToken();
 					env.toReplace[id] = [
 						url,
-						H.httpGet(reg[1]+'?url='+encodeURIComponent(url))
+						H.httpGet(reg[1]+'?url='+encodeURIComponent(url), undefined, undefined, 'form', 'json')
 					];
 					return id;
 				}
